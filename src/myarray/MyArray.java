@@ -19,8 +19,6 @@ public class MyArray {
     int[] oldArray = new int[DEFAULT_SIZE];
 
 
-
-
     public static void main(String[] args) {
 
         MyArray myArray = new MyArray();
@@ -42,12 +40,13 @@ public class MyArray {
 //        arr.remove();
 //        arr.remove();
 //        System.out.println(arr);
-//        System.out.println(arr.getSize());
-//        arr.add(4);
-//        arr.add(2)
-//        arr.add(7);
+        System.out.println(myArray.getSize());
+        myArray.addElement(4);
+        myArray.addElement(2);
+        myArray.addElement(7);
 //        System.out.println(arr);
-//        System.out.println(arr.getSize());
+        System.out.println(myArray.getSize());
+        System.out.println(Arrays.toString(myArray.getArr()));
 //        System.out.println(Arrays.toString(myArray.getArr()));
 
 
@@ -70,9 +69,12 @@ public class MyArray {
         return oldArray;
     }
 
+    public int getSize() {
+        return oldArray.length;
+    }
 
     public void remove() {
-oldArray=Arrays.copyOf(oldArray,oldArray.length-1);
+        oldArray = Arrays.copyOf(oldArray, oldArray.length - 1);
 
     }
 
