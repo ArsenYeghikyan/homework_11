@@ -8,7 +8,7 @@ public class Main {
 
         MyArray myArray = new MyArray();
 //        System.out.println(myArray);
-//        System.out.println(myArray.getSize());
+        System.out.println(myArray.getSize());
 //        System.out.println("Input elements count: ");
 //        Scanner scanner = new Scanner(System.in);
 //        int size = scanner.nextInt();
@@ -19,8 +19,9 @@ public class Main {
         myArray.addElement(4);
         myArray.addElement(5);
         myArray.addElement(6);
-
-
+        System.out.println(myArray.getSize());
+        System.out.println(myArray);
+        myArray.remove();
 
         myArray.addElement(8);
         myArray.addElement(8);
@@ -29,12 +30,7 @@ public class Main {
 
 
 
-        myArray.remove();
-        myArray.remove();
-        myArray.remove();
-        myArray.remove();
-        myArray.remove();
-        myArray.remove();
+
         myArray.remove();
         System.out.println(Arrays.toString(myArray.getArr()));
         myArray.addElement(5);
@@ -43,6 +39,23 @@ public class Main {
         myArray.addElement(5);
         myArray.addElement(5);
 
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove(); myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove(); myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
+        myArray.remove(); myArray.remove();
+        myArray.remove();
         myArray.remove();
         myArray.remove();
         myArray.remove();
@@ -56,8 +69,8 @@ public class Main {
         myArray.remove();
         myArray.addElement(1);
         myArray.addElement(2);
-
         System.out.println(Arrays.toString(myArray.getArr()));
+        System.out.println(myArray);
 
 //        System.out.println(myArray.getSize());
 //

@@ -12,10 +12,10 @@ public class MyArray {
     private int[] myArray;
 
 
-    public MyArray(int capacity) {
-        myArray = new int[capacity];
-
-    }
+//    public MyArray(int capacity) {
+//        myArray = new int[capacity];
+//
+//    }
 
     public MyArray() {
         myArray = new int[DEFAULT_SIZE];
@@ -70,19 +70,17 @@ public class MyArray {
 
     public int getSize() {
 
-        return getArr().length;
+        return myArray.length;
     }
 
 
     public void remove() {
+        int arrayLength = getArr().length;
 
-        int[] x = Arrays.copyOf(removeZero(), removeZero().length - 1);
-        if (x.length>0){
-
+        if (arrayLength > 0) {
+            int[] x = Arrays.copyOf(getArr(), getArr().length - 1);
             myArray = Arrays.copyOf(x, myArray.length);
         }
-
-
 
     }
 
