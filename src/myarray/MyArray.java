@@ -12,8 +12,8 @@ public class MyArray {
 
 
     public MyArray(int capacity) {
-
         myArray = new int[capacity];
+
     }
 
     public MyArray() {
@@ -68,17 +68,19 @@ public class MyArray {
     }
 
     public int getSize() {
-        return myArray.length;
+
+        return removeZero().length;
     }
 
     public void remove() {
 
-        myArray = Arrays.copyOf(myArray, myArray.length - 1);
+            myArray = Arrays.copyOf(removeZero(), myArray.length - 1);
+
 
     }
 
     @Override
     public String toString() {
-        return "myArray " + Arrays.toString(myArray);
+        return "myArray " + Arrays.toString(removeZero());
     }
 }

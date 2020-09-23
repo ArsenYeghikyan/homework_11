@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        MyArray myArray = new MyArray();
+        MyArray myArray = new MyArray(10);
         System.out.println(myArray);
         System.out.println(myArray.getSize());
         System.out.println("Input elements count: ");
@@ -17,22 +17,22 @@ public class Main {
             myArray.addElement(value);
         }
         System.out.println(Arrays.toString(myArray.getArr()));
+        System.out.println(myArray.getSize());
 
 
+        myArray.remove();
+        myArray.remove();
+        myArray.remove();
 
-        myArray.remove();
-        myArray.remove();
-        myArray.remove();
-        myArray.remove();
         System.out.println(Arrays.toString(myArray.getArr()));
-//
-//        System.out.println(myArray.getSize());
-//        myArray.addElement(4);
-//        myArray.addElement(2);
-//        myArray.addElement(7);
-//        System.out.println(myArray);
-//        System.out.println(myArray.getSize());
-//        System.out.println(Arrays.toString(myArray.getArr()));
+
+        System.out.println(myArray.getSize());
+        myArray.addElement(4);
+        myArray.addElement(2);
+        myArray.addElement(7);
+        System.out.println(myArray);
+        System.out.println(myArray.getSize());
+        System.out.println(Arrays.toString(myArray.getArr()));
 
 
 
