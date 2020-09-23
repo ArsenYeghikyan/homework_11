@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class MyArray {
     private int count = 0;
+
     private static final int DEFAULT_SIZE = 10;
 
     private int[] myArray;
@@ -48,19 +49,19 @@ public class MyArray {
 
 
     private int[] removeZero() {
-        int j = 0;
+        int index = 0;
         int length = CounterForNotZero();
-        int[] newArray = new int[length];
+        int[] arrayWithoutZero = new int[length];
         for (int value : myArray) {
             if (value != 0) {
-                newArray[j] = value;
-                j++;
+                arrayWithoutZero[index] = value;
+                index++;
 
             }
 
         }
 
-        return newArray;
+        return arrayWithoutZero;
     }
 
     public int[] getArr() {
@@ -69,18 +70,25 @@ public class MyArray {
 
     public int getSize() {
 
-        return removeZero().length;
+        return getArr().length;
     }
+
 
     public void remove() {
 
-            myArray = Arrays.copyOf(removeZero(), myArray.length - 1);
+        int[] x = Arrays.copyOf(removeZero(), removeZero().length - 1);
+        if (x.length>0){
+
+            myArray = Arrays.copyOf(x, myArray.length);
+        }
+
 
 
     }
 
+
     @Override
     public String toString() {
-        return "myArray " + Arrays.toString(removeZero());
+        return "myArray " + Arrays.toString(getArr());
     }
 }
