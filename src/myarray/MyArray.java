@@ -1,28 +1,24 @@
 package myarray;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class MyArray {
+public class MyArray <T extends Number> {
     private int count = 0;
 
     private static final int DEFAULT_SIZE = 10;
 
-    private int[] myArray;
+    private T[] myArray;
 
 
-//    public MyArray(int capacity) {
-//        myArray = new int[capacity];
-//
-//    }
 
-    public MyArray() {
-        myArray = new int[DEFAULT_SIZE];
+    public MyArray(T[] myArray) {
+        this.myArray = myArray;
     }
 
-
-    public void addElement(int value) {
+    public void addElement(T value) {
 
         myArray[count++] = value;
 
@@ -36,8 +32,8 @@ public class MyArray {
     private int CounterForNotZero() {
         int notZeroCount = 0;
 
-        for (int value : myArray) {
-            if (value != 0) {
+        for (T value : myArray) {
+            if (value != null) {
 
                 notZeroCount++;
 
@@ -48,42 +44,34 @@ public class MyArray {
     }
 
 
-    private int[] removeZero() {
+    private Object[] removeZero() {
         int index = 0;
         int length = CounterForNotZero();
-        int[] arrayWithoutZero = new int[length];
-        for (int value : myArray) {
-            if (value != 0) {
+        Object[] arrayWithoutZero = new Object[length];
+        for (T value : myArray) {
+            if (value != null) {
                 arrayWithoutZero[index] = value;
                 index++;
-
             }
-
         }
-
         return arrayWithoutZero;
     }
 
-    public int[] getArr() {
+    public Object[] getArr() {
         return removeZero();
     }
 
     public int getSize() {
-
         return myArray.length;
     }
 
-
-    public void remove() {
-        int arrayLength = getArr().length;
-
-        if (arrayLength > 0) {
-            int[] x = Arrays.copyOf(getArr(), getArr().length - 1);
-            myArray = Arrays.copyOf(x, myArray.length);
-        }
-
-    }
-
+//    public void remove() {
+//        int arrayLength = myArray.length;
+//        if (arrayLength > 0) {
+//
+//            myArray = Arrays.copyOf(myArray, myArray.length-1);
+//        }
+//    }
 
     @Override
     public String toString() {
